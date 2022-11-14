@@ -1,33 +1,16 @@
 import {
-  AppstoreOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  ShopOutlined,
   TeamOutlined,
-  UploadOutlined,
+  StockOutlined,
   UserOutlined,
-  VideoCameraOutlined,
 } from '@ant-design/icons';
 import Title from 'antd/lib/typography/Title';
 import { Layout, Menu } from 'antd';
 import React from 'react';
 import ProductoList from '../producto/ProductoList';
+import SubMenu from 'antd/lib/menu/SubMenu';
 import ModificarDrawer from '../ModificarDrawer';
 
 const { Header, Content, Footer, Sider } = Layout;
-const items = [
-  UserOutlined,
-  UploadOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  AppstoreOutlined,
-  TeamOutlined,
-  ShopOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: React.createElement(icon),
-  label: `nav ${index + 1}`,
-}));
 
 const Plantilla = () => (
   <Layout hasSider>
@@ -42,7 +25,50 @@ const Plantilla = () => (
       }}
     >
       <div className="logo" />
-      <Menu  theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
+      <Menu defaultSelectedKeys={['Home']}
+            mode = 'inline'
+            >
+              
+              <Menu.Item key='Home'>
+                Home
+              </Menu.Item>
+              <SubMenu
+                title ={
+                  <span>
+                    <UserOutlined />
+                    <span>Dueño</span>
+                  </span>
+                }
+                >
+                  
+                <Menu.Item key='dueño'>El Pepe</Menu.Item></SubMenu>
+              <SubMenu
+                title ={
+                  <span>
+                    <TeamOutlined />
+                    <span>Cajeros</span>
+                  </span>
+                }
+                >
+                  <Menu.ItemGroup key='cajero' title='Cajeros'>
+                  <Menu.Item key='cajero1'>Cajero 1</Menu.Item>
+                  <Menu.Item key='cajero2'>Cajero 2</Menu.Item>
+                  </Menu.ItemGroup>
+              </SubMenu>
+              <SubMenu
+                title ={
+                  <span>
+                    <StockOutlined />
+                    <span>Stock</span>
+                  </span>
+                }
+                >
+                  <Menu.ItemGroup key='producto' title='Productos'>
+                  <Menu.Item key='producto1'>Producto 1</Menu.Item>
+                  <Menu.Item key='producto2'>Producto 2</Menu.Item>
+                  </Menu.ItemGroup>
+              </SubMenu>
+            </Menu>
     </Sider>
     <Layout
       className="site-layout"
@@ -58,23 +84,20 @@ const Plantilla = () => (
         }}
       ><Title style={{color:"white",float:"left"}} level={3}>SmartVent</Title>
       </Header>
-      <Content
+      <Content className="gutter-box"
         style={{
-          margin: '24px 16px 0',
+          margin: '1px 10px 0',
           overflow: 'initial',
         }}
       >
         <div
           className="site-layout-background"
-          style={{
-            padding: 24,
-            textAlign: 'center',
-          }}
+          style={{textAlign: 'center'}}
         >
           <ProductoList />
         </div>
       </Content>
-      <Footer
+      <Footer className="gutter-box"
         style={{
           textAlign: 'center',
         }}

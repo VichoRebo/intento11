@@ -8,7 +8,7 @@ const Producto = (props) => {
   return (
     <Card
       style={{
-        width: 300,
+        width: 408.75,
       }}
       cover={<img
         alt="example"
