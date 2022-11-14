@@ -5,8 +5,13 @@ import './ProductoList.css'
 import axios from 'axios'
 
 const data = [
-    { key: "1", imagen: "https://joeschmoe.io/api/v1/2", precio: "Detalle 2", cantidad: "Titulo 2312" },
-    { key: "2", imagen: "https://joeschmoe.io/api/v1/1", precio: "Detalle 1", cantidad: "Titulo 1" },
+    { key: "1", imagen: "https://joeschmoe.io/api/v1/2", precio: "Detalle 1", cantidad: "Titulo 1" },
+    { key: "2", imagen: "https://joeschmoe.io/api/v1/1", precio: "Detalle 2", cantidad: "Titulo 2" },
+    { key: "3", imagen: "https://joeschmoe.io/api/v1/4", precio: "Detalle 3", cantidad: "Titulo 3" },
+    { key: "4", imagen: "https://joeschmoe.io/api/v1/5", precio: "Detalle 4", cantidad: "Titulo 4" },
+    { key: "5", imagen: "https://joeschmoe.io/api/v1/3", precio: "Detalle 5", cantidad: "Titulo 5" },
+    { key: "6", imagen: "https://joeschmoe.io/api/v1/6", precio: "Detalle 6", cantidad: "Titulo 6" },
+    { key: "7", imagen: "https://joeschmoe.io/api/v1/7", precio: "Detalle 7", cantidad: "Titulo 7" }
 
 ]
 const ProductoList = () => {

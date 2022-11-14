@@ -8,6 +8,7 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
+import Title from 'antd/lib/typography/Title';
 import { Layout, Menu } from 'antd';
 import React from 'react';
 import ProductoList from '../producto/ProductoList';
@@ -16,7 +17,6 @@ import ModificarDrawer from '../ModificarDrawer';
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
   UserOutlined,
-  VideoCameraOutlined,
   UploadOutlined,
   BarChartOutlined,
   CloudOutlined,
@@ -42,7 +42,7 @@ const Plantilla = () => (
       }}
     >
       <div className="logo" />
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
+      <Menu  theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
     </Sider>
     <Layout
       className="site-layout"
@@ -51,12 +51,12 @@ const Plantilla = () => (
       }}
     >
       <Header
+      
         className="site-layout-background"
         style={{
-          padding: 0,
+          padding: 10,
         }}
-      >
-        <ModificarDrawer />
+      ><Title style={{color:"white",float:"left"}} level={3}>SmartVent</Title>
       </Header>
       <Content
         style={{
@@ -79,7 +79,7 @@ const Plantilla = () => (
           textAlign: 'center',
         }}
       >
-        INACAP Programación Backend ©2022 Created by MILES
+        Buscanos en www.SmartVent.cl o en nuestras redes sociales @SmartVent 
       </Footer>
     </Layout>
   </Layout>

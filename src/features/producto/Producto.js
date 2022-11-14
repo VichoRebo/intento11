@@ -2,7 +2,6 @@ import { SettingOutlined } from '@ant-design/icons';
 import { Avatar, Card } from 'antd';
 import React from 'react';
 import ModificarDrawer from '../ModificarDrawer';
-import DetallesModal from '../DetallesModal';
 const { Meta } = Card;
 
 const Producto = (props) => {
